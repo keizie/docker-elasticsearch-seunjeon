@@ -1,7 +1,7 @@
-FROM elasticsearch:2.4.0
+FROM elasticsearch:5.0.0
 MAINTAINER Jeong-Hee Kang <keizie@gmail.com>
 
-RUN bin/plugin install org.bitbucket.eunjeon/elasticsearch-analysis-seunjeon/2.4.0.1
+RUN ./bin/elasticsearch-plugin install https://oss.sonatype.org/service/local/repositories/releases/content/org/bitbucket/eunjeon/elasticsearch-analysis-seunjeon/5.0.0.0/elasticsearch-analysis-seunjeon-5.0.0.0.zip
 
 VOLUME ["/usr/share/elasticsearch/data"]
 
